@@ -56,7 +56,7 @@ interface TransactionInfo {
   programs: string[];
   accounts: string[];
   instructions: Instruction[];
-  日志?: string[];
+  logs?: string[];
 }
 
 interface TokenTransfer {
@@ -277,6 +277,25 @@ class SolanaIndexer {
               continue;
             }
 
+            // Logger.logBlockTransactions({
+            //   slot: slotInfo.slot,
+            //   blockTime: block.blockTime ? new Date(block.blockTime * 1000).toISOString() : null,
+            //   transactions: block.transactions.map(tx => ({
+            //     signature: tx.transaction.signatures[0],
+            //     meta: {
+            //       err: tx.meta?.err,
+            //       logMessages: tx.meta?.logMessages,
+            //       preTokenBalances: tx.meta?.preTokenBalances,
+            //       postTokenBalances: tx.meta?.postTokenBalances
+            //     },
+            //     instructions: tx.transaction.message.compiledInstructions.map(inst => ({
+            //       programId: tx.transaction.message.staticAccountKeys[inst.programIdIndex].toBase58(),
+            //       data: inst.data  // swap discriminator
+            //     }))
+            //   }))
+            // });
+    
+
             const programIds = new Set<string>();
             message.compiledInstructions.forEach(ix => {
               if (ix.programIdIndex !== undefined) {
@@ -322,7 +341,7 @@ class SolanaIndexer {
                     data: Buffer.from(ix.data).toString('hex'),
                   };
 
-                  if (instruction.programId === 'CPMDWBwJDtYax9qW7AyRuVC19Cc4L4Vcy4n2BHAbHkCW' && instruction.data) {
+                  if (instruction.programId === process.env.WATCH_PROGRAM_ID && instruction.data) {
                     const dataBuffer = Buffer.from(instruction.data, 'hex');
                     if (dataBuffer.length >= 8) {
                       const discriminator = dataBuffer.slice(0, 8).toString('hex');
@@ -342,7 +361,7 @@ class SolanaIndexer {
 
               if (instructions.length > 0) {
                 txInfo.instructions = instructions;
-                txInfo.日志 = tx.meta.logMessages || [];
+                txInfo.logs = tx.meta.logMessages || [];
                 console.log('Raydium 交易:', txInfo);
 
                 // 记录交易基础信息
@@ -371,7 +390,7 @@ class SolanaIndexer {
                       const TOKEN_SYMBOLS: { [key: string]: string } = {
                         'So11111111111111111111111111111111111111112': 'SOL',
                         'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v': 'USDC',
-                        // 添加更多代币映射...
+                        // '4QGCZU9vto49NwohfTLQd8JA6B49dacpMyNhfFB1W9We': 'USDT',
                       };
 
                       // 记录 Swap 详情

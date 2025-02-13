@@ -510,7 +510,6 @@ class SolanaIndexer {
         // 格式化代币金额的辅助函数
         function formatTokenAmount(amount: number, decimals: number): number {
           const formatted = amount / Math.pow(10, decimals);
-          // 限制小数位数为 4 位
           return Number(formatted.toFixed(4));
         }
 

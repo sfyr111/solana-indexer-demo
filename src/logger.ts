@@ -33,6 +33,13 @@ export class Logger {
       blockTime: data.blockTime,
       programs: data.programs,
       accounts: data.accounts,
+      meta: {
+        preTokenBalances: data.meta?.preTokenBalances,    
+        postTokenBalances: data.meta?.postTokenBalances,  
+        err: data.meta?.err,                             
+        logMessages: data.meta?.logMessages,             
+        status: data.meta?.status                        
+      },
       instructions: data.instructions.map((inst: any) => ({
         programId: inst.programId,
         accounts: inst.accounts || [],

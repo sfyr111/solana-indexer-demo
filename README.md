@@ -1,3 +1,77 @@
+## devnet sol 链 Raydium swap 数据
+
+```
+npm install
+npm start
+
+// show in logs/*.log
+```
+
+## swap 数据
+
+`logs/swaps.log`
+
+```json
+{
+  "timestamp": "2025-02-13T07:45:25.331Z",
+  "type": "swap",
+  "data": {
+    "type": "swap",
+    "input": {
+      "token": "SOL",
+      "amount": 62.5687,
+      "decimals": 9
+    },
+    "output": {
+      "token": "4QGCZU9vto49NwohfTLQd8JA6B49dacpMyNhfFB1W9We",
+      "amount": 789570864,
+      "decimals": 6
+    },
+    "timestamp": "2025-02-12T10:40:26.000Z"
+  }
+}
+
+{
+  "timestamp": "2025-02-13T07:45:25.717Z",
+  "type": "swap",
+  "data": {
+    "type": "swap",
+    "input": {
+      "token": "SOL",
+      "amount": 62.5687,
+      "decimals": 9
+    },
+    "output": {
+      "token": "4QGCZU9vto49NwohfTLQd8JA6B49dacpMyNhfFB1W9We",
+      "amount": 789570864,
+      "decimals": 6
+    },
+    "timestamp": "2025-02-12T10:40:26.000Z"
+  }
+}
+
+{
+  "timestamp": "2025-02-13T07:45:26.321Z",
+  "type": "swap",
+  "data": {
+    "type": "swap",
+    "input": {
+      "token": "SOL",
+      "amount": 62.5687,
+      "decimals": 9
+    },
+    "output": {
+      "token": "4QGCZU9vto49NwohfTLQd8JA6B49dacpMyNhfFB1W9We",
+      "amount": 789570864,
+      "decimals": 6
+    },
+    "timestamp": "2025-02-12T10:40:26.000Z"
+  }
+}
+
+
+```
+
 ```javascript
 
 /**

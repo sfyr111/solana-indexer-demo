@@ -9,20 +9,20 @@
  * 
  * 2. 处理区块中的交易
  *    - 获取区块中的所有交易
- *    - 过滤出包含 Raydium 程序的交易 (CPMDWBwJDtYax9qW7AyRuVC19Cc4L4Vcy4n2BHAbHkCW) q: 在代码哪一行
+ *    - 过滤出包含 Raydium 程序的交易 (CPMDWBwJDtYax9qW7AyRuVC19Cc4L4Vcy4n2BHAbHkCW)
  * 
  * 3. 识别 Swap 交易
  *    a. 检查交易中的指令
- *       - 提取指令数据的前 8 字节作为 discriminator  q: 在代码哪一行，你是如何知道是这个 discriminator 的
- *       - 通过 RAYDIUM_INSTRUCTION_TYPES 映射表识别指令类型 q: 是如何得到 这个指令映射的
+ *       - 提取指令数据的前 8 字节作为 discriminator 
+ *       - 通过 RAYDIUM_INSTRUCTION_TYPES 映射表识别指令类型
  * 
  *    b. 解析 Swap 指令
- *       - 检查交易前后的代币余额变化 q: 在代码哪一行
- *       - 确定输入和输出代币 q: 在代码哪一行
- *       - 计算交易金额 q: 在代码哪一行
+ *       - 检查交易前后的代币余额变化
+ *       - 确定输入和输出代币
+ *       - 计算交易金额
  * 
  * 4. 记录交易信息
- *    - 使用 Logger 记录交易详情 q: 在代码哪一行
+ *    - 使用 Logger 记录交易详情
  *    - 保存到不同的日志文件中
  */
 

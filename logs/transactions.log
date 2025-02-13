@@ -1,0 +1,765 @@
+{
+  "timestamp": "2025-02-13T06:37:22.498Z",
+  "type": "transaction",
+  "data": {
+    "signature": "3waDY2VvWATf8jpFiydAGC41LduhuE45AqAnhELnxrpEDd54Z95P4qLdJiC5bZ9C2mjHVTmoA9xHMKNGeLTs8ATZ",
+    "slot": 360551856,
+    "blockTime": "2025-02-12T10:40:26.000Z",
+    "programs": [
+      "CPMDWBwJDtYax9qW7AyRuVC19Cc4L4Vcy4n2BHAbHkCW"
+    ],
+    "accounts": [
+      {
+        "index": 0,
+        "address": "3NJFgoA6unpPz5BeeY4MX2rnCUNuLAtfKp8LK2UdbUVc"
+      },
+      {
+        "index": 1,
+        "address": "4NQJTjohqGJQ9gwrdYJsoiaAu5TmqVZjyzTRHsH1Mgph"
+      },
+      {
+        "index": 2,
+        "address": "6R7Asw5iBm4dQUdNrVjAemo9HqDKirRtJKxdk3nqLuvp"
+      },
+      {
+        "index": 3,
+        "address": "7Qc5ZvEwFW63BQzxrcrBozR8he6JtMzbC9FD5JKwZxsG"
+      },
+      {
+        "index": 4,
+        "address": "ACnLvdMM6b7XLQ9dXL87BeRFhDyYUZz39BFDNJMFnigG"
+      },
+      {
+        "index": 5,
+        "address": "AFt4uGbs9JqzHizYqHUrgjsyKcrUhygYkVqfdrB9ix8p"
+      },
+      {
+        "index": 6,
+        "address": "D4criefVQGkB9EHGnkT6dk4iqC1fD2Num9PzsMy1rfZQ"
+      },
+      {
+        "index": 7,
+        "address": "11111111111111111111111111111111"
+      },
+      {
+        "index": 8,
+        "address": "4QGCZU9vto49NwohfTLQd8JA6B49dacpMyNhfFB1W9We",
+        "description": "USDC Mint"
+      },
+      {
+        "index": 9,
+        "address": "7rQ1QFNosMkUCuh7Z7fPbTHvh73b68sQYdirycEzJVuw"
+      },
+      {
+        "index": 10,
+        "address": "9zSzfkYy6awexsHvmggeH36pfVUdDGyCcwmjT3AQPBj6"
+      },
+      {
+        "index": 11,
+        "address": "ComputeBudget111111111111111111111111111111"
+      },
+      {
+        "index": 12,
+        "address": "CPMDWBwJDtYax9qW7AyRuVC19Cc4L4Vcy4n2BHAbHkCW",
+        "description": "Raydium Program"
+      },
+      {
+        "index": 13,
+        "address": "So11111111111111111111111111111111111111112",
+        "description": "Wrapped SOL"
+      },
+      {
+        "index": 14,
+        "address": "SysvarRent111111111111111111111111111111111"
+      },
+      {
+        "index": 15,
+        "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "description": "Token Program"
+      }
+    ],
+    "instructions": [
+      {
+        "programId": "ComputeBudget111111111111111111111111111111",
+        "type": "unknown",
+        "accounts": [],
+        "data": "03b0710b0000000000"
+      },
+      {
+        "programId": "ComputeBudget111111111111111111111111111111",
+        "type": "unknown",
+        "accounts": [],
+        "data": "02400d0300"
+      },
+      {
+        "programId": "11111111111111111111111111111111",
+        "type": "unknown",
+        "accounts": [
+          "3NJFgoA6unpPz5BeeY4MX2rnCUNuLAtfKp8LK2UdbUVc",
+          "ACnLvdMM6b7XLQ9dXL87BeRFhDyYUZz39BFDNJMFnigG"
+        ],
+        "data": "03000000232c14407f12eee3bc26e5d3f2663417fa799a4bf681c6038518ee52eb1df8f7200000000000000048763253415875516e435a59364c785161415435517271457469587235554b43f01d1f0000000000a50000000000000006ddf6e1d765a193d9cbe146ceeb79ac1cb485ed5f5b37913a8cf5857eff00a9"
+      },
+      {
+        "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "type": "unknown",
+        "accounts": [
+          "ACnLvdMM6b7XLQ9dXL87BeRFhDyYUZz39BFDNJMFnigG",
+          "So11111111111111111111111111111111111111112",
+          "3NJFgoA6unpPz5BeeY4MX2rnCUNuLAtfKp8LK2UdbUVc",
+          "SysvarRent111111111111111111111111111111111"
+        ],
+        "data": "01"
+      },
+      {
+        "programId": "CPMDWBwJDtYax9qW7AyRuVC19Cc4L4Vcy4n2BHAbHkCW",
+        "type": "swap",
+        "discriminator": "8fbe5adac41e33de",
+        "accounts": [
+          "3NJFgoA6unpPz5BeeY4MX2rnCUNuLAtfKp8LK2UdbUVc",
+          "7rQ1QFNosMkUCuh7Z7fPbTHvh73b68sQYdirycEzJVuw",
+          "9zSzfkYy6awexsHvmggeH36pfVUdDGyCcwmjT3AQPBj6",
+          "D4criefVQGkB9EHGnkT6dk4iqC1fD2Num9PzsMy1rfZQ",
+          "6R7Asw5iBm4dQUdNrVjAemo9HqDKirRtJKxdk3nqLuvp",
+          "ACnLvdMM6b7XLQ9dXL87BeRFhDyYUZz39BFDNJMFnigG",
+          "7Qc5ZvEwFW63BQzxrcrBozR8he6JtMzbC9FD5JKwZxsG",
+          "AFt4uGbs9JqzHizYqHUrgjsyKcrUhygYkVqfdrB9ix8p",
+          "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "4QGCZU9vto49NwohfTLQd8JA6B49dacpMyNhfFB1W9We",
+          "So11111111111111111111111111111111111111112",
+          "4NQJTjohqGJQ9gwrdYJsoiaAu5TmqVZjyzTRHsH1Mgph"
+        ],
+        "data": "8fbe5adac41e33de00acdf4a1cce02003a6e176c0e000000",
+        "explanation": {
+          "description": "Raydium Swap 指令",
+          "discriminator": "通过指令数据前8字节 (8fbe5adac41e33de) 识别为 swap 操作",
+          "accountRoles": [
+            {
+              "index": 0,
+              "role": "用户账户 (发起者)"
+            },
+            {
+              "index": 1,
+              "role": "流动性池状态账户"
+            },
+            {
+              "index": 2,
+              "role": "流动性池授权账户"
+            },
+            {
+              "index": 3,
+              "role": "流动性池基础代币账户"
+            },
+            {
+              "index": 4,
+              "role": "流动性池报价代币账户"
+            },
+            {
+              "index": 5,
+              "role": "用户基础代币账户"
+            },
+            {
+              "index": 6,
+              "role": "用户报价代币账户"
+            },
+            {
+              "index": 7,
+              "role": "流动性池Mint账户"
+            },
+            {
+              "index": 8,
+              "role": "Token Program"
+            },
+            {
+              "index": 9,
+              "role": "Token Program"
+            },
+            {
+              "index": 10,
+              "role": "基础代币Mint"
+            },
+            {
+              "index": 11,
+              "role": "报价代币Mint"
+            }
+          ]
+        }
+      },
+      {
+        "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "type": "unknown",
+        "accounts": [
+          "ACnLvdMM6b7XLQ9dXL87BeRFhDyYUZz39BFDNJMFnigG",
+          "3NJFgoA6unpPz5BeeY4MX2rnCUNuLAtfKp8LK2UdbUVc",
+          "3NJFgoA6unpPz5BeeY4MX2rnCUNuLAtfKp8LK2UdbUVc"
+        ],
+        "data": "09"
+      }
+    ],
+    "logs": [
+      "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+      "Program ComputeBudget111111111111111111111111111111 success",
+      "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+      "Program ComputeBudget111111111111111111111111111111 success",
+      "Program 11111111111111111111111111111111 invoke [1]",
+      "Program 11111111111111111111111111111111 success",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [1]",
+      "Program log: Instruction: InitializeAccount",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 3443 of 199550 compute units",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+      "Program CPMDWBwJDtYax9qW7AyRuVC19Cc4L4Vcy4n2BHAbHkCW invoke [1]",
+      "Program log: Instruction: SwapBaseInput",
+      "Program data: QMbN6CYIceKzOYeH9hHGgzIWqKmY0cqvECcJHAaOTBitbS97X4fWVwAIAaksvAAASzgWZRIAAAAArN9KHM4CADuoYpEOAAAAAAAAAAAAAAAAAAAAAAAAAAE=",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+      "Program log: Instruction: TransferChecked",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 6173 of 171947 compute units",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+      "Program log: Instruction: TransferChecked",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 6238 of 161838 compute units",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+      "Program CPMDWBwJDtYax9qW7AyRuVC19Cc4L4Vcy4n2BHAbHkCW consumed 42411 of 196107 compute units",
+      "Program CPMDWBwJDtYax9qW7AyRuVC19Cc4L4Vcy4n2BHAbHkCW success",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [1]",
+      "Program log: Instruction: CloseAccount",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 2915 of 153696 compute units",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success"
+    ],
+    "tokenBalances": {},
+    "analysis": {
+      "swapIdentification": {
+        "title": "Raydium swap 识别过程:",
+        "steps": [
+          "1. 检查程序ID是否为 Raydium (CPMDWBwJDtYax9qW7AyRuVC19Cc4L4Vcy4n2BHAbHkCW)",
+          "2. 解析指令数据的前8字节作为 discriminator (8fbe5adac41e33de)",
+          "3. 匹配已知的 swap discriminator",
+          "4. 确认指令日志中包含 \"Instruction: SwapBaseInput\"",
+          "5. 分析 TransferChecked 指令确认代币转移"
+        ]
+      },
+      "tokenBalanceTracking": {
+        "title": "代币余额变化追踪:",
+        "steps": [
+          "1. 记录交易前所有代币账户余额 (preTokenBalances)",
+          "2. 记录交易后所有代币账户余额 (postTokenBalances)",
+          "3. 计算每个代币的净余额变化",
+          "4. SOL -> USDC 的 swap 操作会看到:",
+          "   - SOL 余额减少 (输入)",
+          "   - USDC 余额增加 (输出)"
+        ]
+      }
+    }
+  }
+}
+
+{
+  "timestamp": "2025-02-13T06:37:22.877Z",
+  "type": "transaction",
+  "data": {
+    "signature": "3waDY2VvWATf8jpFiydAGC41LduhuE45AqAnhELnxrpEDd54Z95P4qLdJiC5bZ9C2mjHVTmoA9xHMKNGeLTs8ATZ",
+    "slot": 360551856,
+    "blockTime": "2025-02-12T10:40:26.000Z",
+    "programs": [
+      "CPMDWBwJDtYax9qW7AyRuVC19Cc4L4Vcy4n2BHAbHkCW"
+    ],
+    "accounts": [
+      {
+        "index": 0,
+        "address": "3NJFgoA6unpPz5BeeY4MX2rnCUNuLAtfKp8LK2UdbUVc"
+      },
+      {
+        "index": 1,
+        "address": "4NQJTjohqGJQ9gwrdYJsoiaAu5TmqVZjyzTRHsH1Mgph"
+      },
+      {
+        "index": 2,
+        "address": "6R7Asw5iBm4dQUdNrVjAemo9HqDKirRtJKxdk3nqLuvp"
+      },
+      {
+        "index": 3,
+        "address": "7Qc5ZvEwFW63BQzxrcrBozR8he6JtMzbC9FD5JKwZxsG"
+      },
+      {
+        "index": 4,
+        "address": "ACnLvdMM6b7XLQ9dXL87BeRFhDyYUZz39BFDNJMFnigG"
+      },
+      {
+        "index": 5,
+        "address": "AFt4uGbs9JqzHizYqHUrgjsyKcrUhygYkVqfdrB9ix8p"
+      },
+      {
+        "index": 6,
+        "address": "D4criefVQGkB9EHGnkT6dk4iqC1fD2Num9PzsMy1rfZQ"
+      },
+      {
+        "index": 7,
+        "address": "11111111111111111111111111111111"
+      },
+      {
+        "index": 8,
+        "address": "4QGCZU9vto49NwohfTLQd8JA6B49dacpMyNhfFB1W9We",
+        "description": "USDC Mint"
+      },
+      {
+        "index": 9,
+        "address": "7rQ1QFNosMkUCuh7Z7fPbTHvh73b68sQYdirycEzJVuw"
+      },
+      {
+        "index": 10,
+        "address": "9zSzfkYy6awexsHvmggeH36pfVUdDGyCcwmjT3AQPBj6"
+      },
+      {
+        "index": 11,
+        "address": "ComputeBudget111111111111111111111111111111"
+      },
+      {
+        "index": 12,
+        "address": "CPMDWBwJDtYax9qW7AyRuVC19Cc4L4Vcy4n2BHAbHkCW",
+        "description": "Raydium Program"
+      },
+      {
+        "index": 13,
+        "address": "So11111111111111111111111111111111111111112",
+        "description": "Wrapped SOL"
+      },
+      {
+        "index": 14,
+        "address": "SysvarRent111111111111111111111111111111111"
+      },
+      {
+        "index": 15,
+        "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "description": "Token Program"
+      }
+    ],
+    "instructions": [
+      {
+        "programId": "ComputeBudget111111111111111111111111111111",
+        "type": "unknown",
+        "accounts": [],
+        "data": "03b0710b0000000000"
+      },
+      {
+        "programId": "ComputeBudget111111111111111111111111111111",
+        "type": "unknown",
+        "accounts": [],
+        "data": "02400d0300"
+      },
+      {
+        "programId": "11111111111111111111111111111111",
+        "type": "unknown",
+        "accounts": [
+          "3NJFgoA6unpPz5BeeY4MX2rnCUNuLAtfKp8LK2UdbUVc",
+          "ACnLvdMM6b7XLQ9dXL87BeRFhDyYUZz39BFDNJMFnigG"
+        ],
+        "data": "03000000232c14407f12eee3bc26e5d3f2663417fa799a4bf681c6038518ee52eb1df8f7200000000000000048763253415875516e435a59364c785161415435517271457469587235554b43f01d1f0000000000a50000000000000006ddf6e1d765a193d9cbe146ceeb79ac1cb485ed5f5b37913a8cf5857eff00a9"
+      },
+      {
+        "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "type": "unknown",
+        "accounts": [
+          "ACnLvdMM6b7XLQ9dXL87BeRFhDyYUZz39BFDNJMFnigG",
+          "So11111111111111111111111111111111111111112",
+          "3NJFgoA6unpPz5BeeY4MX2rnCUNuLAtfKp8LK2UdbUVc",
+          "SysvarRent111111111111111111111111111111111"
+        ],
+        "data": "01"
+      },
+      {
+        "programId": "CPMDWBwJDtYax9qW7AyRuVC19Cc4L4Vcy4n2BHAbHkCW",
+        "type": "swap",
+        "discriminator": "8fbe5adac41e33de",
+        "accounts": [
+          "3NJFgoA6unpPz5BeeY4MX2rnCUNuLAtfKp8LK2UdbUVc",
+          "7rQ1QFNosMkUCuh7Z7fPbTHvh73b68sQYdirycEzJVuw",
+          "9zSzfkYy6awexsHvmggeH36pfVUdDGyCcwmjT3AQPBj6",
+          "D4criefVQGkB9EHGnkT6dk4iqC1fD2Num9PzsMy1rfZQ",
+          "6R7Asw5iBm4dQUdNrVjAemo9HqDKirRtJKxdk3nqLuvp",
+          "ACnLvdMM6b7XLQ9dXL87BeRFhDyYUZz39BFDNJMFnigG",
+          "7Qc5ZvEwFW63BQzxrcrBozR8he6JtMzbC9FD5JKwZxsG",
+          "AFt4uGbs9JqzHizYqHUrgjsyKcrUhygYkVqfdrB9ix8p",
+          "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "4QGCZU9vto49NwohfTLQd8JA6B49dacpMyNhfFB1W9We",
+          "So11111111111111111111111111111111111111112",
+          "4NQJTjohqGJQ9gwrdYJsoiaAu5TmqVZjyzTRHsH1Mgph"
+        ],
+        "data": "8fbe5adac41e33de00acdf4a1cce02003a6e176c0e000000",
+        "explanation": {
+          "description": "Raydium Swap 指令",
+          "discriminator": "通过指令数据前8字节 (8fbe5adac41e33de) 识别为 swap 操作",
+          "accountRoles": [
+            {
+              "index": 0,
+              "role": "用户账户 (发起者)"
+            },
+            {
+              "index": 1,
+              "role": "流动性池状态账户"
+            },
+            {
+              "index": 2,
+              "role": "流动性池授权账户"
+            },
+            {
+              "index": 3,
+              "role": "流动性池基础代币账户"
+            },
+            {
+              "index": 4,
+              "role": "流动性池报价代币账户"
+            },
+            {
+              "index": 5,
+              "role": "用户基础代币账户"
+            },
+            {
+              "index": 6,
+              "role": "用户报价代币账户"
+            },
+            {
+              "index": 7,
+              "role": "流动性池Mint账户"
+            },
+            {
+              "index": 8,
+              "role": "Token Program"
+            },
+            {
+              "index": 9,
+              "role": "Token Program"
+            },
+            {
+              "index": 10,
+              "role": "基础代币Mint"
+            },
+            {
+              "index": 11,
+              "role": "报价代币Mint"
+            }
+          ]
+        }
+      },
+      {
+        "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "type": "unknown",
+        "accounts": [
+          "ACnLvdMM6b7XLQ9dXL87BeRFhDyYUZz39BFDNJMFnigG",
+          "3NJFgoA6unpPz5BeeY4MX2rnCUNuLAtfKp8LK2UdbUVc",
+          "3NJFgoA6unpPz5BeeY4MX2rnCUNuLAtfKp8LK2UdbUVc"
+        ],
+        "data": "09"
+      }
+    ],
+    "logs": [
+      "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+      "Program ComputeBudget111111111111111111111111111111 success",
+      "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+      "Program ComputeBudget111111111111111111111111111111 success",
+      "Program 11111111111111111111111111111111 invoke [1]",
+      "Program 11111111111111111111111111111111 success",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [1]",
+      "Program log: Instruction: InitializeAccount",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 3443 of 199550 compute units",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+      "Program CPMDWBwJDtYax9qW7AyRuVC19Cc4L4Vcy4n2BHAbHkCW invoke [1]",
+      "Program log: Instruction: SwapBaseInput",
+      "Program data: QMbN6CYIceKzOYeH9hHGgzIWqKmY0cqvECcJHAaOTBitbS97X4fWVwAIAaksvAAASzgWZRIAAAAArN9KHM4CADuoYpEOAAAAAAAAAAAAAAAAAAAAAAAAAAE=",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+      "Program log: Instruction: TransferChecked",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 6173 of 171947 compute units",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+      "Program log: Instruction: TransferChecked",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 6238 of 161838 compute units",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+      "Program CPMDWBwJDtYax9qW7AyRuVC19Cc4L4Vcy4n2BHAbHkCW consumed 42411 of 196107 compute units",
+      "Program CPMDWBwJDtYax9qW7AyRuVC19Cc4L4Vcy4n2BHAbHkCW success",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [1]",
+      "Program log: Instruction: CloseAccount",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 2915 of 153696 compute units",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success"
+    ],
+    "tokenBalances": {},
+    "analysis": {
+      "swapIdentification": {
+        "title": "Raydium swap 识别过程:",
+        "steps": [
+          "1. 检查程序ID是否为 Raydium (CPMDWBwJDtYax9qW7AyRuVC19Cc4L4Vcy4n2BHAbHkCW)",
+          "2. 解析指令数据的前8字节作为 discriminator (8fbe5adac41e33de)",
+          "3. 匹配已知的 swap discriminator",
+          "4. 确认指令日志中包含 \"Instruction: SwapBaseInput\"",
+          "5. 分析 TransferChecked 指令确认代币转移"
+        ]
+      },
+      "tokenBalanceTracking": {
+        "title": "代币余额变化追踪:",
+        "steps": [
+          "1. 记录交易前所有代币账户余额 (preTokenBalances)",
+          "2. 记录交易后所有代币账户余额 (postTokenBalances)",
+          "3. 计算每个代币的净余额变化",
+          "4. SOL -> USDC 的 swap 操作会看到:",
+          "   - SOL 余额减少 (输入)",
+          "   - USDC 余额增加 (输出)"
+        ]
+      }
+    }
+  }
+}
+
+{
+  "timestamp": "2025-02-13T06:37:23.296Z",
+  "type": "transaction",
+  "data": {
+    "signature": "3waDY2VvWATf8jpFiydAGC41LduhuE45AqAnhELnxrpEDd54Z95P4qLdJiC5bZ9C2mjHVTmoA9xHMKNGeLTs8ATZ",
+    "slot": 360551856,
+    "blockTime": "2025-02-12T10:40:26.000Z",
+    "programs": [
+      "CPMDWBwJDtYax9qW7AyRuVC19Cc4L4Vcy4n2BHAbHkCW"
+    ],
+    "accounts": [
+      {
+        "index": 0,
+        "address": "3NJFgoA6unpPz5BeeY4MX2rnCUNuLAtfKp8LK2UdbUVc"
+      },
+      {
+        "index": 1,
+        "address": "4NQJTjohqGJQ9gwrdYJsoiaAu5TmqVZjyzTRHsH1Mgph"
+      },
+      {
+        "index": 2,
+        "address": "6R7Asw5iBm4dQUdNrVjAemo9HqDKirRtJKxdk3nqLuvp"
+      },
+      {
+        "index": 3,
+        "address": "7Qc5ZvEwFW63BQzxrcrBozR8he6JtMzbC9FD5JKwZxsG"
+      },
+      {
+        "index": 4,
+        "address": "ACnLvdMM6b7XLQ9dXL87BeRFhDyYUZz39BFDNJMFnigG"
+      },
+      {
+        "index": 5,
+        "address": "AFt4uGbs9JqzHizYqHUrgjsyKcrUhygYkVqfdrB9ix8p"
+      },
+      {
+        "index": 6,
+        "address": "D4criefVQGkB9EHGnkT6dk4iqC1fD2Num9PzsMy1rfZQ"
+      },
+      {
+        "index": 7,
+        "address": "11111111111111111111111111111111"
+      },
+      {
+        "index": 8,
+        "address": "4QGCZU9vto49NwohfTLQd8JA6B49dacpMyNhfFB1W9We",
+        "description": "USDC Mint"
+      },
+      {
+        "index": 9,
+        "address": "7rQ1QFNosMkUCuh7Z7fPbTHvh73b68sQYdirycEzJVuw"
+      },
+      {
+        "index": 10,
+        "address": "9zSzfkYy6awexsHvmggeH36pfVUdDGyCcwmjT3AQPBj6"
+      },
+      {
+        "index": 11,
+        "address": "ComputeBudget111111111111111111111111111111"
+      },
+      {
+        "index": 12,
+        "address": "CPMDWBwJDtYax9qW7AyRuVC19Cc4L4Vcy4n2BHAbHkCW",
+        "description": "Raydium Program"
+      },
+      {
+        "index": 13,
+        "address": "So11111111111111111111111111111111111111112",
+        "description": "Wrapped SOL"
+      },
+      {
+        "index": 14,
+        "address": "SysvarRent111111111111111111111111111111111"
+      },
+      {
+        "index": 15,
+        "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "description": "Token Program"
+      }
+    ],
+    "instructions": [
+      {
+        "programId": "ComputeBudget111111111111111111111111111111",
+        "type": "unknown",
+        "accounts": [],
+        "data": "03b0710b0000000000"
+      },
+      {
+        "programId": "ComputeBudget111111111111111111111111111111",
+        "type": "unknown",
+        "accounts": [],
+        "data": "02400d0300"
+      },
+      {
+        "programId": "11111111111111111111111111111111",
+        "type": "unknown",
+        "accounts": [
+          "3NJFgoA6unpPz5BeeY4MX2rnCUNuLAtfKp8LK2UdbUVc",
+          "ACnLvdMM6b7XLQ9dXL87BeRFhDyYUZz39BFDNJMFnigG"
+        ],
+        "data": "03000000232c14407f12eee3bc26e5d3f2663417fa799a4bf681c6038518ee52eb1df8f7200000000000000048763253415875516e435a59364c785161415435517271457469587235554b43f01d1f0000000000a50000000000000006ddf6e1d765a193d9cbe146ceeb79ac1cb485ed5f5b37913a8cf5857eff00a9"
+      },
+      {
+        "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "type": "unknown",
+        "accounts": [
+          "ACnLvdMM6b7XLQ9dXL87BeRFhDyYUZz39BFDNJMFnigG",
+          "So11111111111111111111111111111111111111112",
+          "3NJFgoA6unpPz5BeeY4MX2rnCUNuLAtfKp8LK2UdbUVc",
+          "SysvarRent111111111111111111111111111111111"
+        ],
+        "data": "01"
+      },
+      {
+        "programId": "CPMDWBwJDtYax9qW7AyRuVC19Cc4L4Vcy4n2BHAbHkCW",
+        "type": "swap",
+        "discriminator": "8fbe5adac41e33de",
+        "accounts": [
+          "3NJFgoA6unpPz5BeeY4MX2rnCUNuLAtfKp8LK2UdbUVc",
+          "7rQ1QFNosMkUCuh7Z7fPbTHvh73b68sQYdirycEzJVuw",
+          "9zSzfkYy6awexsHvmggeH36pfVUdDGyCcwmjT3AQPBj6",
+          "D4criefVQGkB9EHGnkT6dk4iqC1fD2Num9PzsMy1rfZQ",
+          "6R7Asw5iBm4dQUdNrVjAemo9HqDKirRtJKxdk3nqLuvp",
+          "ACnLvdMM6b7XLQ9dXL87BeRFhDyYUZz39BFDNJMFnigG",
+          "7Qc5ZvEwFW63BQzxrcrBozR8he6JtMzbC9FD5JKwZxsG",
+          "AFt4uGbs9JqzHizYqHUrgjsyKcrUhygYkVqfdrB9ix8p",
+          "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "4QGCZU9vto49NwohfTLQd8JA6B49dacpMyNhfFB1W9We",
+          "So11111111111111111111111111111111111111112",
+          "4NQJTjohqGJQ9gwrdYJsoiaAu5TmqVZjyzTRHsH1Mgph"
+        ],
+        "data": "8fbe5adac41e33de00acdf4a1cce02003a6e176c0e000000",
+        "explanation": {
+          "description": "Raydium Swap 指令",
+          "discriminator": "通过指令数据前8字节 (8fbe5adac41e33de) 识别为 swap 操作",
+          "accountRoles": [
+            {
+              "index": 0,
+              "role": "用户账户 (发起者)"
+            },
+            {
+              "index": 1,
+              "role": "流动性池状态账户"
+            },
+            {
+              "index": 2,
+              "role": "流动性池授权账户"
+            },
+            {
+              "index": 3,
+              "role": "流动性池基础代币账户"
+            },
+            {
+              "index": 4,
+              "role": "流动性池报价代币账户"
+            },
+            {
+              "index": 5,
+              "role": "用户基础代币账户"
+            },
+            {
+              "index": 6,
+              "role": "用户报价代币账户"
+            },
+            {
+              "index": 7,
+              "role": "流动性池Mint账户"
+            },
+            {
+              "index": 8,
+              "role": "Token Program"
+            },
+            {
+              "index": 9,
+              "role": "Token Program"
+            },
+            {
+              "index": 10,
+              "role": "基础代币Mint"
+            },
+            {
+              "index": 11,
+              "role": "报价代币Mint"
+            }
+          ]
+        }
+      },
+      {
+        "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "type": "unknown",
+        "accounts": [
+          "ACnLvdMM6b7XLQ9dXL87BeRFhDyYUZz39BFDNJMFnigG",
+          "3NJFgoA6unpPz5BeeY4MX2rnCUNuLAtfKp8LK2UdbUVc",
+          "3NJFgoA6unpPz5BeeY4MX2rnCUNuLAtfKp8LK2UdbUVc"
+        ],
+        "data": "09"
+      }
+    ],
+    "logs": [
+      "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+      "Program ComputeBudget111111111111111111111111111111 success",
+      "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+      "Program ComputeBudget111111111111111111111111111111 success",
+      "Program 11111111111111111111111111111111 invoke [1]",
+      "Program 11111111111111111111111111111111 success",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [1]",
+      "Program log: Instruction: InitializeAccount",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 3443 of 199550 compute units",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+      "Program CPMDWBwJDtYax9qW7AyRuVC19Cc4L4Vcy4n2BHAbHkCW invoke [1]",
+      "Program log: Instruction: SwapBaseInput",
+      "Program data: QMbN6CYIceKzOYeH9hHGgzIWqKmY0cqvECcJHAaOTBitbS97X4fWVwAIAaksvAAASzgWZRIAAAAArN9KHM4CADuoYpEOAAAAAAAAAAAAAAAAAAAAAAAAAAE=",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+      "Program log: Instruction: TransferChecked",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 6173 of 171947 compute units",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+      "Program log: Instruction: TransferChecked",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 6238 of 161838 compute units",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+      "Program CPMDWBwJDtYax9qW7AyRuVC19Cc4L4Vcy4n2BHAbHkCW consumed 42411 of 196107 compute units",
+      "Program CPMDWBwJDtYax9qW7AyRuVC19Cc4L4Vcy4n2BHAbHkCW success",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [1]",
+      "Program log: Instruction: CloseAccount",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 2915 of 153696 compute units",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success"
+    ],
+    "tokenBalances": {},
+    "analysis": {
+      "swapIdentification": {
+        "title": "Raydium swap 识别过程:",
+        "steps": [
+          "1. 检查程序ID是否为 Raydium (CPMDWBwJDtYax9qW7AyRuVC19Cc4L4Vcy4n2BHAbHkCW)",
+          "2. 解析指令数据的前8字节作为 discriminator (8fbe5adac41e33de)",
+          "3. 匹配已知的 swap discriminator",
+          "4. 确认指令日志中包含 \"Instruction: SwapBaseInput\"",
+          "5. 分析 TransferChecked 指令确认代币转移"
+        ]
+      },
+      "tokenBalanceTracking": {
+        "title": "代币余额变化追踪:",
+        "steps": [
+          "1. 记录交易前所有代币账户余额 (preTokenBalances)",
+          "2. 记录交易后所有代币账户余额 (postTokenBalances)",
+          "3. 计算每个代币的净余额变化",
+          "4. SOL -> USDC 的 swap 操作会看到:",
+          "   - SOL 余额减少 (输入)",
+          "   - USDC 余额增加 (输出)"
+        ]
+      }
+    }
+  }
+}
+

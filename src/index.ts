@@ -5,6 +5,7 @@ import {
 } from '@solana/web3.js';
 import retry from 'retry';
 import { config } from 'dotenv';
+import { Logger } from './logger';
 
 config();
 
@@ -56,6 +57,31 @@ interface TransactionInfo {
   accounts: string[];
   instructions: Instruction[];
   日志?: string[];
+}
+
+interface TokenTransfer {
+  token: string;
+  from: string;
+  to: string;
+  amount: number;
+  decimals: number;
+}
+
+interface SwapDetails {
+  type: 'swap';
+  inputTransfer: TokenTransfer;
+  outputTransfer: TokenTransfer;
+}
+
+interface TokenBalance {
+  accountIndex: number;
+  mint: string;
+  uiTokenAmount: {
+    amount: string;
+    decimals: number;
+    uiAmount: number | null;
+    uiAmountString: string;
+  };
 }
 
 class SolanaIndexer {
@@ -318,6 +344,73 @@ class SolanaIndexer {
                 txInfo.instructions = instructions;
                 txInfo.日志 = tx.meta.logMessages || [];
                 console.log('Raydium 交易:', txInfo);
+
+                // 记录交易基础信息
+                Logger.logTransaction(txInfo);
+
+                for (const instruction of instructions) {
+                  // 记录指令信息
+                  Logger.logInstruction({
+                    programId: instruction.programId,
+                    type: instruction.type,
+                    discriminator: instruction.discriminator,
+                  });
+
+                  if (instruction.type === 'swap') {
+                    // 记录 Swap 指令详情
+                    Logger.logDebug({
+                      type: 'swap_instruction',
+                      discriminator: instruction.discriminator,
+                      accounts: instruction.accounts,
+                      data: instruction.data,
+                    });
+
+                    const swapDetails = await this.parseSwapInstruction(instruction, tx);
+                    if (swapDetails) {
+                      // 添加代币符号映射
+                      const TOKEN_SYMBOLS: { [key: string]: string } = {
+                        'So11111111111111111111111111111111111111112': 'SOL',
+                        'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v': 'USDC',
+                        // 添加更多代币映射...
+                      };
+
+                      // 记录 Swap 详情
+                      Logger.logSwap({
+                        type: swapDetails.type,
+                        input: {
+                          token: TOKEN_SYMBOLS[swapDetails.inputTransfer.token] || swapDetails.inputTransfer.token,
+                          amount: swapDetails.inputTransfer.amount,
+                          decimals: swapDetails.inputTransfer.decimals
+                        },
+                        output: {
+                          token: TOKEN_SYMBOLS[swapDetails.outputTransfer.token] || swapDetails.outputTransfer.token,
+                          amount: swapDetails.outputTransfer.amount,
+                          decimals: swapDetails.outputTransfer.decimals
+                        },
+                        timestamp: txInfo.blockTime
+                      });
+                    } else {
+                      console.log('无法解析 swap 详情，原因可能是:', {
+                        hasPreBalances: Boolean(tx.meta.preTokenBalances),
+                        hasPostBalances: Boolean(tx.meta.postTokenBalances),
+                        preBalancesLength: tx.meta.preTokenBalances?.length,
+                        postBalancesLength: tx.meta.postTokenBalances?.length,
+                      });
+                    }
+                  }
+                }
+              }
+
+              // 记录代币余额变化
+              if (tx.meta.preTokenBalances || tx.meta.postTokenBalances) {
+                Logger.logTokenBalances({
+                  pre: tx.meta.preTokenBalances,
+                  post: tx.meta.postTokenBalances,
+                  relevantLogs: tx.meta.logMessages?.filter(log => 
+                    log.includes('TransferChecked') || 
+                    log.includes('SwapBaseInput')
+                  )
+                });
               }
             }
           } catch (error) {
@@ -344,16 +437,114 @@ class SolanaIndexer {
       }
     }
   }
+
+  private async parseSwapInstruction(instruction: Instruction, tx: any): Promise<SwapDetails | null> {
+    try {
+      const preBalances = tx.meta.preTokenBalances as TokenBalance[];
+      const postBalances = tx.meta.postTokenBalances as TokenBalance[];
+      
+      if (!preBalances || !postBalances) {
+        console.log('没有找到代币余额信息');
+        return null;
+      }
+
+      // 计算每个代币账户的余额变化
+      const balanceChanges = new Map<string, {
+        mint: string,
+        decimals: number,
+        change: number
+      }>();
+
+      // 处理前置余额
+      preBalances.forEach(pre => {
+        balanceChanges.set(pre.mint, {
+          mint: pre.mint,
+          decimals: pre.uiTokenAmount.decimals,
+          change: -Number(pre.uiTokenAmount.amount)
+        });
+      });
+
+      // 处理后置余额
+      postBalances.forEach(post => {
+        const existing = balanceChanges.get(post.mint);
+        if (existing) {
+          existing.change += Number(post.uiTokenAmount.amount);
+        } else {
+          balanceChanges.set(post.mint, {
+            mint: post.mint,
+            decimals: post.uiTokenAmount.decimals,
+            change: Number(post.uiTokenAmount.amount)
+          });
+        }
+      });
+
+      // 过滤出有实际变化的代币
+      const changes = Array.from(balanceChanges.values())
+        .filter(x => Math.abs(x.change) > 0);
+
+      console.log('代币余额变化:', changes);
+
+      if (changes.length >= 2) {
+        // 按变化金额排序，负数（支出）在前
+        changes.sort((a, b) => a.change - b.change);
+
+        // 格式化代币金额的辅助函数
+        function formatTokenAmount(amount: number, decimals: number): number {
+          const formatted = amount / Math.pow(10, decimals);
+          // 限制小数位数为 4 位
+          return Number(formatted.toFixed(4));
+        }
+
+        return {
+          type: 'swap',
+          inputTransfer: {
+            token: changes[0].mint,
+            amount: formatTokenAmount(Math.abs(changes[0].change), changes[0].decimals),
+            decimals: changes[0].decimals,
+            from: '',
+            to: ''
+          },
+          outputTransfer: {
+            token: changes[changes.length - 1].mint,
+            amount: formatTokenAmount(changes[changes.length - 1].change, changes[changes.length - 1].decimals),
+            decimals: changes[changes.length - 1].decimals,
+            from: '',
+            to: ''
+          }
+        };
+      }
+    } catch (error) {
+      console.error('解析 swap 指令失败:', error);
+    }
+    return null;
+  }
 }
 
-function getRaydiumInstructionType(discriminator: string): string {
-  const INSTRUCTION_TYPES: { [key: string]: string } = {
-    '0b05a0b39c3cd8ea': 'swap',
-    'f4c069a1b5f233bc': 'addLiquidity',
-    '4a1c3df8fa781539': 'removeLiquidity',
-  };
+// Raydium V3 指令类型映射
+const RAYDIUM_INSTRUCTION_TYPES: { [key: string]: string } = {
+  // Swap 相关
+  '8fbe5adac41e33de': 'swap',         // SwapBaseInput
+  '45373366584850': 'swap',           // SwapBaseInput (another version)
+  'e9337f012d70c0f0': 'swap',         // SwapBaseOutput
+  
+  // 流动性相关
+  'f4c069a1b5f233bc': 'addLiquidity',
+  '4a1c3df8fa781539': 'removeLiquidity',
+  
+  // 其他常见操作
+  '0b05a0b39c3cd8ea': 'createPool',
+  'd4c69119d8ea3088': 'closePosition',
+  'b4c76604d72c58c2': 'openPosition',
+  'cd35e4f35f45a845': 'increaseLiquidity',
+  'b119a7e3d6c6c2e3': 'decreaseLiquidity'
+};
 
-  return INSTRUCTION_TYPES[discriminator] || 'unknown';
+function getRaydiumInstructionType(discriminator: string): string {
+  const type = RAYDIUM_INSTRUCTION_TYPES[discriminator];
+  if (type) {
+    console.log(`识别到 Raydium ${type} 指令, discriminator: ${discriminator}`);
+  }
+  return type || 'unknown';
 }
 
 // 启动索引服务

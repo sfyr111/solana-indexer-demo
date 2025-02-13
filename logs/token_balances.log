@@ -1,0 +1,138 @@
+{
+  "timestamp": "2025-02-13T06:37:22.499Z",
+  "type": "balance_change",
+  "data": {
+    "pre": [
+      {
+        "mint": "4QGCZU9vto49NwohfTLQd8JA6B49dacpMyNhfFB1W9We",
+        "owner": "3NJFgoA6unpPz5BeeY4MX2rnCUNuLAtfKp8LK2UdbUVc",
+        "amount": "789570864"
+      },
+      {
+        "mint": "4QGCZU9vto49NwohfTLQd8JA6B49dacpMyNhfFB1W9We",
+        "owner": "7rQ1QFNosMkUCuh7Z7fPbTHvh73b68sQYdirycEzJVuw",
+        "amount": "206900000"
+      },
+      {
+        "mint": "So11111111111111111111111111111111111111112",
+        "owner": "7rQ1QFNosMkUCuh7Z7fPbTHvh73b68sQYdirycEzJVuw",
+        "amount": "79.005366347"
+      }
+    ],
+    "post": [
+      {
+        "mint": "4QGCZU9vto49NwohfTLQd8JA6B49dacpMyNhfFB1W9We",
+        "owner": "3NJFgoA6unpPz5BeeY4MX2rnCUNuLAtfKp8LK2UdbUVc",
+        "amount": "0"
+      },
+      {
+        "mint": "4QGCZU9vto49NwohfTLQd8JA6B49dacpMyNhfFB1W9We",
+        "owner": "7rQ1QFNosMkUCuh7Z7fPbTHvh73b68sQYdirycEzJVuw",
+        "amount": "996470864"
+      },
+      {
+        "mint": "So11111111111111111111111111111111111111112",
+        "owner": "7rQ1QFNosMkUCuh7Z7fPbTHvh73b68sQYdirycEzJVuw",
+        "amount": "16.436662288"
+      }
+    ],
+    "relevantLogs": [
+      "Program log: Instruction: SwapBaseInput",
+      "Program log: Instruction: TransferChecked",
+      "Program log: Instruction: TransferChecked"
+    ]
+  }
+}
+
+{
+  "timestamp": "2025-02-13T06:37:22.877Z",
+  "type": "balance_change",
+  "data": {
+    "pre": [
+      {
+        "mint": "4QGCZU9vto49NwohfTLQd8JA6B49dacpMyNhfFB1W9We",
+        "owner": "3NJFgoA6unpPz5BeeY4MX2rnCUNuLAtfKp8LK2UdbUVc",
+        "amount": "789570864"
+      },
+      {
+        "mint": "4QGCZU9vto49NwohfTLQd8JA6B49dacpMyNhfFB1W9We",
+        "owner": "7rQ1QFNosMkUCuh7Z7fPbTHvh73b68sQYdirycEzJVuw",
+        "amount": "206900000"
+      },
+      {
+        "mint": "So11111111111111111111111111111111111111112",
+        "owner": "7rQ1QFNosMkUCuh7Z7fPbTHvh73b68sQYdirycEzJVuw",
+        "amount": "79.005366347"
+      }
+    ],
+    "post": [
+      {
+        "mint": "4QGCZU9vto49NwohfTLQd8JA6B49dacpMyNhfFB1W9We",
+        "owner": "3NJFgoA6unpPz5BeeY4MX2rnCUNuLAtfKp8LK2UdbUVc",
+        "amount": "0"
+      },
+      {
+        "mint": "4QGCZU9vto49NwohfTLQd8JA6B49dacpMyNhfFB1W9We",
+        "owner": "7rQ1QFNosMkUCuh7Z7fPbTHvh73b68sQYdirycEzJVuw",
+        "amount": "996470864"
+      },
+      {
+        "mint": "So11111111111111111111111111111111111111112",
+        "owner": "7rQ1QFNosMkUCuh7Z7fPbTHvh73b68sQYdirycEzJVuw",
+        "amount": "16.436662288"
+      }
+    ],
+    "relevantLogs": [
+      "Program log: Instruction: SwapBaseInput",
+      "Program log: Instruction: TransferChecked",
+      "Program log: Instruction: TransferChecked"
+    ]
+  }
+}
+
+{
+  "timestamp": "2025-02-13T06:37:23.297Z",
+  "type": "balance_change",
+  "data": {
+    "pre": [
+      {
+        "mint": "4QGCZU9vto49NwohfTLQd8JA6B49dacpMyNhfFB1W9We",
+        "owner": "3NJFgoA6unpPz5BeeY4MX2rnCUNuLAtfKp8LK2UdbUVc",
+        "amount": "789570864"
+      },
+      {
+        "mint": "4QGCZU9vto49NwohfTLQd8JA6B49dacpMyNhfFB1W9We",
+        "owner": "7rQ1QFNosMkUCuh7Z7fPbTHvh73b68sQYdirycEzJVuw",
+        "amount": "206900000"
+      },
+      {
+        "mint": "So11111111111111111111111111111111111111112",
+        "owner": "7rQ1QFNosMkUCuh7Z7fPbTHvh73b68sQYdirycEzJVuw",
+        "amount": "79.005366347"
+      }
+    ],
+    "post": [
+      {
+        "mint": "4QGCZU9vto49NwohfTLQd8JA6B49dacpMyNhfFB1W9We",
+        "owner": "3NJFgoA6unpPz5BeeY4MX2rnCUNuLAtfKp8LK2UdbUVc",
+        "amount": "0"
+      },
+      {
+        "mint": "4QGCZU9vto49NwohfTLQd8JA6B49dacpMyNhfFB1W9We",
+        "owner": "7rQ1QFNosMkUCuh7Z7fPbTHvh73b68sQYdirycEzJVuw",
+        "amount": "996470864"
+      },
+      {
+        "mint": "So11111111111111111111111111111111111111112",
+        "owner": "7rQ1QFNosMkUCuh7Z7fPbTHvh73b68sQYdirycEzJVuw",
+        "amount": "16.436662288"
+      }
+    ],
+    "relevantLogs": [
+      "Program log: Instruction: SwapBaseInput",
+      "Program log: Instruction: TransferChecked",
+      "Program log: Instruction: TransferChecked"
+    ]
+  }
+}
+
